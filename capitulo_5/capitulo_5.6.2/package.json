@@ -1,0 +1,15 @@
+{
+  "name": "capitulo_5.6.2",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "William Bruno <wbrunom@gmail.com> (http://wbruno.com.br)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.4"
+  }
+}

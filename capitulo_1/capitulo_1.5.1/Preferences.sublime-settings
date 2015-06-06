@@ -1,0 +1,33 @@
+{
+  "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+  "ensure_newline_at_eof_on_save": true,
+  "file_exclude_patterns":
+  [
+    ".DS_Store",
+    "*.min.*"
+  ],
+  "folder_exclude_patterns":
+  [
+    ".git",
+    ".tmp",
+    "coverage",
+    "node_modules",
+    "vendor"
+  ],
+  "font_size": 13,
+  "highlight_modified_tabs": true,
+  "ignored_packages":
+  [
+    "Vintage"
+  ],
+  "open_files_in_new_window": false,
+  "save_on_focus_lost": true,
+  "scroll_speed": 0,
+  "side_bar_width": 210,
+  "smart_indent": true,
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true,
+  "trim_trailing_white_space_on_save": true,
+  "word_wrap": true
+}
+

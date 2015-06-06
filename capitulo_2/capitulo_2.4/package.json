@@ -1,0 +1,15 @@
+{
+  "name": "capitulo_2.2",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "forrest": "echo 'Run, Forrest, run!'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "William Bruno <wbrunom@gmail.com> (http://wbruno.com.br/)",
+  "license": "ISC",
+  "dependencies": {
+    "debug": "^2.2.0"
+  }
+}
