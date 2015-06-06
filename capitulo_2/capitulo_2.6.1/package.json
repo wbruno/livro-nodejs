@@ -1,0 +1,21 @@
+{
+  "name": "capitulo_2.6.1",
+  "version": "0.0.1",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "William Bruno <wbrunom@gmail.com> (http://wbruno.com.br/)",
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-livereload": "^3.8.0",
+    "gulp-minify-css": "^1.1.0",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.4"
+  }
+}
