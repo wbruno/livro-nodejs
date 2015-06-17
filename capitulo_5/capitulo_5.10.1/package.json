@@ -1,5 +1,5 @@
 {
-  "name": "capitulo_5.7.2",
+  "name": "capitulo_5.10",
   "version": "0.0.1",
   "description": "",
   "main": "./bin/www",
@@ -12,7 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.12.4",
+    "config": "^1.14.0",
+    "debug": "^2.2.0",
     "express": "^4.12.4",
-    "method-override": "^2.3.3"
+    "method-override": "^2.3.3",
+    "mongojs": "^0.18.2"
   }
 }
