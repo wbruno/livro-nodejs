@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<ul id="apis">
+  <li class="api-item">
+    <h2 class="api-item-title">Stormtroppers CRUD</h2>
+
+    <ul class="endpoints">
+{% include 'crud/get.html' %}
+{% include 'crud/get_id.html' %}
+{% include 'crud/post.html' %}
+{% include 'crud/put.html' %}
+{% include 'crud/delete.html' %}
+   </ul><!-- .endpoints -->
+  </li><!-- .api-item -->
+
+  <li class="api-item">
+    <h2 class="api-item-title">Healthcheck</h2>
+
+    <ul class="endpoints">
+{% include 'check/ping.html' %}
+{% include 'check/version.html' %}
+{% include 'check/complete.html' %}
+   </ul><!-- .endpoints -->
+  </li><!-- .api-item -->
+
+</ul><!-- #apis -->
+
+{% endblock %}

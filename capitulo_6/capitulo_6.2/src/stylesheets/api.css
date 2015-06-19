@@ -1,0 +1,84 @@
+body {
+  font: 14px 'Open Sans', sans-serif;
+  padding-top: 70px;
+  color: #333;
+  min-width: 300px;
+}
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+p { margin-bottom: 20px; }
+h1, h2, h3 { font-weight: bold; margin-bottom: 15px; }
+h1 { font-size: 1.5em; }
+h2 { font-size: 1.2em; }
+h3 { font-size: 1.1em; }
+.fleft { float: left; }
+#header {
+  background-color: #034482;
+  background-image: linear-gradient(to bottom, #323232, #222);
+  width: 100%; height: 50px; line-height: 50px;
+  position: fixed;
+  top: 0; left: 0;
+}
+#header-title {
+  color: #fff;
+}
+.content {
+  width: 1180px;
+  margin: 0 auto;
+}
+.api-item-title {
+  color: #999;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+.api-item-title:hover { color: #000; }
+.endpoints {
+  width: 80%;
+  margin: 20px auto;
+}
+.endpoint-item {
+  margin-bottom: 15px; border-radius: 3px;
+}
+.noun {
+  color: #fff;
+  border-radius: 3px;
+  text-align: center;
+  width: 60px;
+  height: 25px; line-height: 25px;
+  display: inline-block;
+  font-size: 0.7em;
+}
+.endpoint-heading { overflow: hidden; }
+.endpoint-name { font-weight: bold; margin-left: 10px; padding-top: 4px; color: #000; font-size: 0.9em; }
+.noun-get { background-color: #E7F0F7; border: 1px solid #c3d9ec }
+.noun-post { background-color: #E7F6EC; border: 1px solid #c3e8d1 }
+.noun-put { background-color: #f6e7f7; border: 1px solid #dcaaf7 }
+.noun-delete { background-color: #ffe1e1; border: 1px solid #ee9898 }
+.noun-get h3 { color: #0F6AB4; }
+.noun-post h3 { color: #10A54A; }
+.noun-put h3 { color: #8320b7; }
+.noun-delete h3 { color: #dc2f2f; }
+.noun-get .endpoint-heading { border-bottom: 1px solid #c3d9ec }
+.noun-post .endpoint-heading { border-bottom: 1px solid #c3e8d1 }
+.noun-put .endpoint-heading { border-bottom: 1px solid #dcaaf7 }
+.noun-delete .endpoint-heading { border-bottom: 1px solid #ee9898 }
+.noun-get .noun { background-color: #0F6AB4; }
+.noun-post .noun { background-color: #10A54A; }
+.noun-put .noun { background-color: #8320b7; }
+.noun-delete .noun { background-color: #dc2f2f; }
+.endpoint-content { padding: 15px; }
+pre {
+  background: #F5F5F5;
+  border: 1px solid #DCDCDC; border-radius: 3px;
+  min-height: 15px; padding: 4px 15px;
+}
+@media only screen and (max-width: 1180px) {
+  body { font-size: 12px; }
+  .content,
+  .endpoints { width: 95%; }
+  pre { overflow: auto; font-size: 0.9em; }
+}
+@media only screen and (max-width: 680px) {
+  pre { overflow: auto; font-size: 0.8em; }
+}
