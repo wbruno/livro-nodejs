@@ -18,7 +18,14 @@ var guid = function() {
     s4() + '-' + s4() + s4() + s4();
 };
 
+var isBiggerThan = function(arr, minValue) {
+  return arr.filter(function(item) {
+    return item >= minValue;
+  });
+};
+
 module.exports = {
   arraySum: arraySum,
-  guid: guid
+  guid: guid,
+  isBiggerThan: isBiggerThan
 };

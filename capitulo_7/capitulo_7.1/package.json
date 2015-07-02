@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "pretest": "jshint *",
     "test": "node_modules/mocha/bin/mocha --ui tdd tests/util_test.js"
   },
   "author": "William Bruno <wbrunom@gmail.com> (http://wbruno.com.br)",

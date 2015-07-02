@@ -46,3 +46,12 @@ suite('guid', function() {
     assert.notEqual(uuid1, uuid4);
   });
 });
+
+suite('isBiggerThan', function() {
+  test('should return [3,4,5] from input [1,2,3,4,5], 3', function() {
+    assert.deepEqual(util.isBiggerThan([1,2,3,4,5], 3), [3,4,5]);
+  });
+  test('should return [] from input [1,2,3,4,5], 10', function() {
+    assert.deepEqual(util.isBiggerThan([1,2,3,4,5], 10), []);
+  });
+});
