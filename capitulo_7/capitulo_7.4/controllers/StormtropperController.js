@@ -17,6 +17,11 @@ StormtropperController.prototype.getById = function(request, response, next) {
     if(err) {
       return next(err);
     }
+    if(!data) {
+      var err = new Error('Not Found');
+      err.status = 404;
+      return next(err);
+    }
     response.json(data);
   });
 };
