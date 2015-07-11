@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+var app     = require('../app'),
+    cluster = require('cluster'),
+    numCPUs = require('os').cpus().length,
+    debug   = require('debug')('livro_nodejs:www');
+
+if (cluster.isMaster) {
+  for (var i = 0; i < numCPUs; i++) {
+    cluster.fork();
+  }
+
+  cluster.on('exit', function(err) {
+    debug(err);
+  });
+} else {
+  var server = app.listen(3000, function() {
+    var address = server.address();
+    debug('Example app listening at http://%s:%s', address.address, address.port);
+  });
+  server.on('error', function(err) {
+    debug(err);
+  });
+}
