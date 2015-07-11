@@ -23,6 +23,9 @@ chatServer.on('connection', function (client) {
     broadcast(data, client);
   });
   client.on('end', removeClient);
+  client.on('error', function(err) {
+    console.log(err);
+  });
 });
 
 chatServer.listen(9000);
