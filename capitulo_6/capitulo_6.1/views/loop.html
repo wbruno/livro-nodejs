@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<ul>
+{% for film in films %}
+<li>{{film.name}}</li>
+{% endfor %}
+</ul>
+
+{% if is3D %}<p>Hell yeah!</p>{% endif %}
+
+
+{% endblock %}
