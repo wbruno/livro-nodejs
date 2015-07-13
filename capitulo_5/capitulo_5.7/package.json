@@ -1,10 +1,10 @@
 {
-  "name": "capitulo_5.7",
+  "name": "capitulo_5.8",
   "version": "0.0.1",
   "description": "",
-  "main": "app.js",
+  "main": "./bin/www",
   "scripts": {
-    "start": "node app.js",
+    "start": "node ./bin/www",
     "nodemon": "nodemon ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

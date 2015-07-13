@@ -1,5 +1,5 @@
 /**
- * @file capitulo_5/capitulo_5.7/app.js
+ * @file capitulo_5/capitulo_5.8/app.js
  */
 
 var express         = require('express'),
@@ -26,10 +26,7 @@ app.use(function (request, response, next) {
 });
 
 // router
-app.get('/', function (request, response) {
-  response.status(201);
-  response.json({ 'name': 'William Bruno', 'email': 'wbrunom@gmail.com' });
-});
+app.use('/', require('./routes'));
 
 // error handling
 app.use(function(request, response, next) {
@@ -43,8 +40,4 @@ app.use(function(err, request, response, next) {
 });
 
 // server listener
-var server = app.listen(3000, function () {
-    var host = server.address().address;
-    var port = server.address().port;
-    console.log('Example app listening at http://%s:%s', host, port);
-});
+module.exports = app;

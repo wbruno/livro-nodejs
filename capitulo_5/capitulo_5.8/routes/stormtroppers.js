@@ -1,20 +1,12 @@
 var express = require('express'),
     router = express.Router();
 
-router.get('/', function (request, response) {
-  response.send('get all stormtroppers');
-});
-router.get('/:_id', function (request, response) {
-  response.send('get a specific stormtropper by id');
-});
-router.post('/', function (request, response) {
-  response.send('create a new stormtroppers');
-});
-router.put('/:_id', function (request, response) {
-  response.send('update a stormtropper');
-});
-router.delete('/:_id', function (request, response) {
-  response.send('update a stormtropper');
-});
+var StormtropperController = require('../controllers/StormtropperController');
+
+router.get('/', StormtropperController.getAll);
+router.get('/:_id', StormtropperController.getById);
+router.post('/', StormtropperController.create);
+router.put('/:_id', StormtropperController.update);
+router.delete('/:_id', StormtropperController.remove);
 
 module.exports = router;

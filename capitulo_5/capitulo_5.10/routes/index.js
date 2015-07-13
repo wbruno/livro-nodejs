@@ -1,12 +1,9 @@
-var express = require('express'),
-    router = express.Router();
+var express = require('express');
+var router = express.Router();
 
-router.get('/', function (request, response) {
-  response.status(201);
-  response.json({ 'name': 'William Bruno', 'email': 'wbrunom@gmail.com' });
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
 });
-
-// stormtroppers
-router.use('/stormtroppers', require('./stormtroppers'));
 
 module.exports = router;
