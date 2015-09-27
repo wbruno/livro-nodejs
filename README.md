@@ -5,3 +5,4 @@
 * @editora Novatec
 
 [Índice](INDEX.md)
+[Google Groups](https://groups.google.com/forum/#!forum/livro-nodejs-wbruno)
