@@ -9,7 +9,7 @@
 
 * @blog [http://wbruno.com.br](http://wbruno.com.br)
 * @livro [http://novatec.com.br/livros/nodejs/](http://novatec.com.br/livros/nodejs/)
-* @índice [INDEX.md)](INDEX.md)
+* @índice [INDEX.md](INDEX.md)
 * @google groups [https://groups.google.com/forum/#!forum/livro-nodejs-wbruno](https://groups.google.com/forum/#!forum/livro-nodejs-wbruno)
 
 
