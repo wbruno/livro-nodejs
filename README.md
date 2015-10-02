@@ -13,9 +13,10 @@ Caso você tenha algum problema com internet, pode executar o comando abaixo par
 Execute a partir do diretório em que você for escrever a aplicação, pois será criada uma pasta chamada `node_modules`
 
 ```
-$ npm i bluebird body-parser config debug express jwt-simple method-override moment mongojs mongoose mocha passport passport-http
+$ npm i bluebird body-parser config debug express jwt-simple method-override moment 
+$ npm i jshint mongojs mongoose mocha passport passport-http cors swig json2xml hbs jade
 $ npm i gulp gulp-concat gulp-minify-css gulp-uglify gulp-livereload gulp-util
 $ npm i grunt grunt-contrib-watch grunt-contrib-uglify grunt-contrib-cssmin
-$ npm i -g mocha istanbul gulp grunt
+$ npm i -g mocha istanbul gulp grunt nodemon
 ```
 
