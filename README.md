@@ -21,6 +21,7 @@
 * @skook [http://www.skoob.com.br/autor/14762-william-bruno-moraes](http://www.skoob.com.br/autor/14762-william-bruno-moraes)
 * @cia dos livros [http://www.ciadoslivros.com.br/construindo-aplicacoes-com-nodejs-705119-p550481](http://www.ciadoslivros.com.br/construindo-aplicacoes-com-nodejs-705119-p550481)
 * @livrarias curitiba [http://www.livrariascuritiba.com.br/william-bruno-moraes](http://www.livrariascuritiba.com.br/william-bruno-moraes)
+* @amazon [http://www.amazon.com.br/dp/8575224565/ref=pe_740090_112063640_TE_item](http://www.amazon.com.br/dp/8575224565/ref=pe_740090_112063640_TE_item)
 
 
 ### Notícia/Blog
