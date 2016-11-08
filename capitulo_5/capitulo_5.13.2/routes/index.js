@@ -29,7 +29,7 @@ router.post('/login', function (request, response, next) {
     next(err);
   }
 });
-// stormtroppers
-router.use('/stormtroppers', require('./stormtroppers'));
+// stormtroopers
+router.use('/stormtroopers', require('./stormtroopers'));
 
 module.exports = router;

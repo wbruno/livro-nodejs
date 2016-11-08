@@ -1,0 +1,16 @@
+{
+  "restartable": "rs",
+  "ignore": [
+    ".git",
+    "*.md",
+    "coverage",
+    "node_modules/*",
+    "public/*",
+    "src/*"
+  ],
+  "verbose": true,
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "js html"
+}

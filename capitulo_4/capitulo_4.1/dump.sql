@@ -44,26 +44,26 @@ CREATE TABLE `patents` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `stormtropper_division`
+-- Table structure for table `stormtrooper_division`
 --
 
-DROP TABLE IF EXISTS `stormtropper_division`;
+DROP TABLE IF EXISTS `stormtrooper_division`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `stormtropper_division` (
-  `id_stormtropper` int(11) NOT NULL,
+CREATE TABLE `stormtrooper_division` (
+  `id_stormtrooper` int(11) NOT NULL,
   `id_division` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `stormtroppers`
+-- Table structure for table `stormtroopers`
 --
 
-DROP TABLE IF EXISTS `stormtroppers`;
+DROP TABLE IF EXISTS `stormtroopers`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `stormtroppers` (
+CREATE TABLE `stormtroopers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `nickname` varchar(50) NOT NULL,

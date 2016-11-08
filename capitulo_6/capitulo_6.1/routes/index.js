@@ -2,7 +2,7 @@ var express = require('express'),
     router = express.Router();
 
 router.get('/', function (request, response) {
-  response.render('index', { title: 'Stormtroppers API' });
+  response.render('index', { title: 'Stormtroopers API' });
 });
 router.get('/loop', function (request, response) {
   response.render('loop', { title: 'Loop page', films: [
