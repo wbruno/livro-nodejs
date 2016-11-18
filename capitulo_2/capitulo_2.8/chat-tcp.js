@@ -4,9 +4,7 @@ var net         = require('net'),
     chatServer  = net.createServer(),
     clientList  = [];
 
-var removeClient = function (data) {
-  clientList.splice(clientList.indexOf(5), 1);
-};
+
 var broadcast = function (message, client) {
   for (var i = clientList.length - 1; i >= 0; i--) {
     if (client !== clientList[i]) {
@@ -22,7 +20,11 @@ chatServer.on('connection', function (client) {
   client.on('data', function (data) {
     broadcast(data, client);
   });
-  client.on('end', removeClient);
+  client.on('end', function () {
+    console.log('client', clientList.indexOf(client));
+
+    clientList.splice(clientList.indexOf(client), 1);
+  });
   client.on('error', function(err) {
     console.log(err);
   });
