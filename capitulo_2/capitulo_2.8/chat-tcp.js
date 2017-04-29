@@ -1,12 +1,12 @@
 'use strict';
 
-var net         = require('net'),
-    chatServer  = net.createServer(),
-    clientList  = [];
+const net         = require('net');
+const chatServer  = net.createServer();
+const clientList  = [];
 
 
-var broadcast = function (message, client) {
-  for (var i = clientList.length - 1; i >= 0; i--) {
+let broadcast = function (message, client) {
+  for (let i = clientList.length - 1; i >= 0; i--) {
     if (client !== clientList[i]) {
       clientList[i].write(message);
     }
