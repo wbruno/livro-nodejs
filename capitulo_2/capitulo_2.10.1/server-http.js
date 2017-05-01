@@ -1,5 +1,5 @@
-var http = require('http');
-var server = http.createServer(function (request, response) {
+let http = require('http');
+let server = http.createServer(function (request, response) {
   response.writeHead(200, {'Content-Type': 'text/plain'});
 
   if(request.url === '/') {
