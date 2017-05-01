@@ -9,10 +9,10 @@
  * William Bruno, Maio de 2015
  */
 
-var http = require('http');
-var fs = require('fs');
-var fileName = String(process.argv[2] || '').replace(/[^a-z0-9\.]/gi, '');
-var quantityOfParagraphs = String(process.argv[3] || '').replace(/[^\d]/g, '');
+let http = require('http');
+let fs = require('fs');
+let fileName = String(process.argv[2] || '').replace(/[^a-z0-9\.]/gi, '');
+let quantityOfParagraphs = String(process.argv[3] || '').replace(/[^\d]/g, '');
 
 const USAGE = 'USO: node loremipsum.js {nomeDoArquivo} {quantidadeDeParágrafos}';
 
@@ -21,7 +21,7 @@ if (!fileName || !quantityOfParagraphs) {
 }
 
 http.get('http://loripsum.net/api/' + quantityOfParagraphs, function(res) {
-  var text = '';
+  let text = '';
 
   res.on('data', function (chunk) {
     text += chunk;
