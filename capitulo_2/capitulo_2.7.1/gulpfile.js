@@ -1,14 +1,14 @@
-var gulp = require('gulp');
-var gutil = require('gulp-util');
-var concat = require('gulp-concat');
-var minifycss = require('gulp-minify-css');
-var uglify = require('gulp-uglify');
-var livereload = require('gulp-livereload');
-var css = {
+let gulp = require('gulp');
+let gutil = require('gulp-util');
+let concat = require('gulp-concat');
+let minifycss = require('gulp-clean-css');
+let uglify = require('gulp-uglify');
+let livereload = require('gulp-livereload');
+let css = {
   source: 'src/css',
   target: 'public/css'
 };
-var js = {
+let js = {
   source: 'src/js',
   target: 'public/javascript'
 };
