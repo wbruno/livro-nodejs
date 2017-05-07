@@ -1,5 +1,5 @@
-var express = require('express'),
-    router = express.Router();
+const express = require('express');
+const router = express.Router();
 
 router.get('/', function (request, response) {
   response.render('index', { title: 'Stormtroopers API' });
@@ -12,7 +12,8 @@ router.get('/loop', function (request, response) {
       { name: 'Episode IV: A New Hope'},
       { name: 'Episode V: The Empire Strikes Back'},
       { name: 'Episode VI: Return of the Jedi'},
-      { name: 'Episode VII: The Force Awakens'}
+      { name: 'Episode VII: The Force Awakens'},
+      { name: 'Episode VIII: The Last Jedi'}
     ]});
 });
 router.get('/if', function (request, response) {
@@ -24,10 +25,10 @@ router.get('/xml', function (request, response) {
   response.send('<?xml version="1.0" encoding="UTF-8"?><characters><character><name>Boba Fett</name><homeworld>Kamino</homeworld></character><character><name>Jango Fett</name><homeworld>Concord Dawn</homeworld></character><character><name>Chewbacca</name><homeworld>Kashyyyk</homeworld></character></characters>');
 });
 
-var json2xml = require('json2xml');
+let json2xml = require('json2xml');
 router.get('/xml-mapper', function (request, response) {
   response.header('Content-Type','text/xml');
-  var obj = { "characters": [
+  let obj = { "characters": [
     { "character": { "name": "Boba Fett", "homeworld": "Kamino" } },
     { "character": { "name": "Jango Fett", "homeworld": "Concord Dawn" } },
     { "character": { "name": "Chewbacca", "homeworld": "Kashyyyk" } }

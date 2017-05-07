@@ -45,8 +45,8 @@ Execute a partir do diretório em que você for escrever a aplicação, pois ser
 
 ```
 $ npm i bluebird body-parser config debug express jwt-simple method-override moment
-$ npm i jshint mongojs mongoose mocha passport passport-http cors swig json2xml hbs jade
-$ npm i gulp gulp-concat gulp-minify-css gulp-uglify gulp-livereload gulp-util
+$ npm i jshint mongojs mongoose mocha passport passport-http cors swig nunjucks json2xml hbs jade
+$ npm i gulp gulp-concat gulp-minify-css gulp-clean-css gulp-uglify gulp-livereload gulp-util
 $ npm i grunt grunt-contrib-watch grunt-contrib-uglify grunt-contrib-cssmin
 $ npm i -g mocha istanbul gulp grunt nodemon
 ```

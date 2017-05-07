@@ -14,7 +14,7 @@
     "debug": "^2.2.0",
     "express": "^4.12.4",
     "json2xml": "^0.1.1",
-    "swig": "^1.4.2"
+    "nunjucks": "^3.0.0"
   },
   "devDependencies": {
     "gulp": "^3.9.0",

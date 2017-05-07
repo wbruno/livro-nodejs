@@ -1,10 +1,11 @@
 {
-  "name": "capitulo_6.1",
+  "name": "capitulo_6.2.3",
   "version": "0.0.1",
   "description": "",
   "main": "./bin/www",
   "scripts": {
     "start": "node ./bin/www",
+    "nodemon": "nodemon ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "William Bruno <wbrunom@gmail.com> (http://wbruno.com.br)",

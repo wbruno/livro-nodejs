@@ -3,25 +3,30 @@
  */
 
 'use strict';
-var express = require('express'),
-    path    = require('path'),
-    swig    = require('swig'),
-    debug   = require('debug')('livro_nodejs:app'),
-    app     = express();
+const express = require('express');
+const path    = require('path');
+const nunjucks = require('nunjucks');
+const debug   = require('debug')('livro_nodejs:app');
+const app     = express();
 
 // config
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'html');
 app.set('views', path.join(__dirname, 'views'));
-app.engine('html', swig.renderFile);
+
+nunjucks.configure('views', {
+  autoescape: true,
+  express: app,
+  tags: ''
+});
 
 // routes
 app.use('/', require('./routes'));
 
 // errors handling
 app.use(function(request, response, next) {
-  var err = new Error('Not Found');
+  let err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
