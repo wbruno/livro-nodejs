@@ -1,14 +1,14 @@
-var gulp        = require('gulp'),
-    concat      = require('gulp-concat'),
-    minifycss   = require('gulp-minify-css'),
-    uglify      = require('gulp-uglify'),
-    livereload  = require('gulp-livereload');
+const gulp        = require('gulp');
+const concat      = require('gulp-concat');
+const minifycss   = require('gulp-minify-css');
+const uglify      = require('gulp-uglify');
+const livereload  = require('gulp-livereload');
 
-var css = {
+let css = {
   source: 'src/stylesheets',
   target: 'public/stylesheets'
 };
-var js = {
+let js = {
   source: 'src/javascripts',
   target: 'public/javascripts'
 };

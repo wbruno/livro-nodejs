@@ -3,11 +3,11 @@
  */
 
 'use strict';
-var express = require('express'),
-    path    = require('path'),
-    pug     = require('pug'),
-    debug   = require('debug')('livro_nodejs:app'),
-    app     = express();
+const express = require('express');
+const path    = require('path');
+const pug     = require('pug');
+const debug   = require('debug')('livro_nodejs:app');
+const app     = express();
 
 // config
 app.use(express.static(path.join(__dirname, 'public')));
@@ -20,7 +20,7 @@ app.use('/', require('./routes'));
 
 // errors handling
 app.use(function(request, response, next) {
-  var err = new Error('Not Found');
+  let err = new Error('Not Found');
   err.status = 404;
   next(err);
 });

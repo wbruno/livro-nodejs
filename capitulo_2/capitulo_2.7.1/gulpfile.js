@@ -1,9 +1,10 @@
-let gulp = require('gulp');
-let gutil = require('gulp-util');
-let concat = require('gulp-concat');
-let minifycss = require('gulp-clean-css');
-let uglify = require('gulp-uglify');
-let livereload = require('gulp-livereload');
+const gulp = require('gulp');
+const gutil = require('gulp-util');
+const concat = require('gulp-concat');
+const minifycss = require('gulp-clean-css');
+const uglify = require('gulp-uglify');
+const livereload = require('gulp-livereload');
+
 let css = {
   source: 'src/css',
   target: 'public/css'
