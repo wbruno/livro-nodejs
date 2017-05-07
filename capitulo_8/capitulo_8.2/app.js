@@ -1,11 +1,12 @@
 /**
  * @file capitulo_5/capitulo_5.10/app.js
  */
+'use strict';
 
-var express         = require('express'),
-    methodOverride  = require('method-override'),
-    bodyParser      = require('body-parser'),
-    app             = express();
+const express         = require('express');
+const methodOverride  = require('method-override');
+const bodyParser      = require('body-parser');
+const app             = express();
 
 // server config
 app.use(methodOverride('X­HTTP­Method'));
@@ -30,7 +31,7 @@ app.use('/', require('./routes'));
 
 // error handling
 app.use(function(request, response, next) {
-  var err = new Error('Not Found');
+  let err = new Error('Not Found');
   err.status = 404;
   next(err);
 });

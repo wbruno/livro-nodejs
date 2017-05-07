@@ -1,11 +1,13 @@
 #!/usr/bin/env node
-var app     = require('../app'),
-    cluster = require('cluster'),
-    numCPUs = require('os').cpus().length,
-    debug   = require('debug')('livro_nodejs:www');
+'use strict';
+
+const app     = require('../app');
+const cluster = require('cluster');
+const numCPUs = require('os').cpus().length;
+const debug   = require('debug')('livro_nodejs:www');
 
 if (cluster.isMaster) {
-  for (var i = 0; i < numCPUs; i++) {
+  for (let i = 0; i < numCPUs; i++) {
     cluster.fork();
   }
 
@@ -13,8 +15,8 @@ if (cluster.isMaster) {
     debug(err);
   });
 } else {
-  var server = app.listen(3000, function() {
-    var address = server.address();
+  let server = app.listen(3000, function() {
+    let address = server.address();
     debug('Example app listening at http://%s:%s', address.address, address.port);
   });
   server.on('error', function(err) {

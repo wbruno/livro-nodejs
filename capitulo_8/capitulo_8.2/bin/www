@@ -1,8 +1,10 @@
 #!/usr/bin/env node
-var app     = require('../app'),
-    cluster = require('cluster'),
-    numCPUs = require('os').cpus().length,
-    debug   = require('debug')('livro_nodejs:www');
+'use strict';
+
+const app     = require('../app');
+const cluster = require('cluster');
+const numCPUs = require('os').cpus().length;
+const debug   = require('debug')('livro_nodejs:www');
 
 if (cluster.isMaster) {
   for (var i = 0; i < numCPUs; i++) {
