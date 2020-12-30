@@ -1,0 +1,106 @@
+- **Introdução**  6
+  - 1.1 JavaScript  6
+    - 1.1.1 Variáveis 7
+    - 1.1.2 Comentários 9
+    - 1.1.3 Funções 9
+    - 1.1.4 Operações 11
+    - 1.1.5 Controles de fluxo  13
+    - 1.1.6 Laços de repetição  13
+    - 1.1.7 Coleções  13
+    - 1.1.8 Template strings  16
+    - 1.1.9 use strict  17
+    - 1.1.10 ESLint 17
+  - 1.2 Instalação do NodeJS  18
+    - 1.2.1 Gerenciando instalações do NodeJS 20
+    - 1.2.2 Arquivo package.json  20
+  - 1.3 NPM (Node Package Manager)  21
+    - 1.3.1 npx 22
+    - 1.3.2 yarn (Package Manager)  24
+  - 1.4 Console do NodeJS (REPL)  25
+    - 1.4.1 Variáveis de ambiente 25
+  - 1.5 Programação síncrona e assíncrona 28
+    - 1.5.1 Promises  30
+    - 1.5.2 async/await 31
+  - 1.6 Orientação a eventos  32
+  - 1.7 Orientação a objetos  33
+    - 1.7.1 TypeScript  35
+  - 1.8 Programação funcional 35
+  - 1.9 Tenha um bom editor de código 36
+    - 1.9.1 Arquivo de preferências do Sublime Text 3 37
+    - 1.9.2 Arquivo de preferências do Visual Studio Code 38
+    - 1.9.3 EditorConfig.org  39
+  - 1.10 Plugin para visualização de JSON 40
+- **Ferramentas de linha de comando** 41
+  - 2.1 Seu primeiro programa 41
+  - 2.2 Módulo debug  45
+  - 2.3 Brincando com TCP 46
+  - 2.4 Criando um servidor HTTP  49
+  - 2.4.1 Outros endpoints  50
+  - 2.5 Nodemon 51
+  - 2.6 Express Generator 52
+  - 2.7 Método process.nextTick 53
+- **REST (Representational State Transfer)**  55
+  - 3.1 Exemplos de APIs  55
+  - 3.2 Estrutura da requisição 56
+  - 3.3 Estrutura da resposta 58
+  - 3.4 Restrições do REST  59
+  - 3.5 Testando a requisição com curl  59
+  - 3.6 Testando a requisição com o Postman ou Insomnia 60
+- **Bancos de dados** 62
+  - 4.1 MySQL 62
+    - 4.1.1 Relacionamento 1:N  63
+    - 4.1.2 Relacionamento N:N  64
+  - 4.2 MongoDB 66
+    - 4.2.1 Inserindo registros 68
+    - 4.2.2 Selecionando resultados 69
+    - 4.2.3 Realizando buscas 69
+    - 4.2.4 Atualizando informações 70
+    - 4.2.5 Excluindo registros 71
+  - 4.3 Redis 71
+- **Construindo uma API RESTful com ExpressJS** 74
+  - 5.1 ExpressJS 74
+  - 5.2 Method Override 76
+  - 5.3 Body Parser 77
+  - 5.4 Middleware  77
+    - 5.4.1 Middlewares da aplicação  78
+    - 5.4.2 Middleware de terceiros 79
+    - 5.4.3 Middleware de rota e embutido 79
+    - 5.4.4 Middleware de manipulação de erros  79
+  - 5.5 Arquivo app.js  81
+    - 5.5.1 Refatorando o router  82
+    - 5.5.2 Refatorando o server listener 83
+  - 5.6 Rotas 85
+  - 5.7 Controllers 86
+  - 5.8 Models  88
+    - 5.8.1 Banco de dados  88
+    - 5.8.2 Arquitetura das pastas  93
+  - 5.9 Mongoose  95
+  - 5.11 Promise  98
+  - 5.12 Autenticação 101
+    - 5.12.1 Módulo passport  101
+    - 5.12.2 JSON Web Token 103
+- **FrontEnd**  107
+  - 6.1 Servindo arquivos estáticos 107
+  - 6.2 Renderizando informações  112
+  - 6.2.1 Nunjucks  113
+  - 6.2.2 Handlebars  116
+  - 6.2.3 Pug 117
+- **Testes automáticos**  119
+  - 7.1 Criando testes de código  119
+  - 7.2 Mocha 120
+  - 7.2.1 Hooks 124
+  - 7.3 JSHint  125
+  - 7.4 Testes unitários  127
+  - 7.5 Testes funcionais 133
+  - 7.6 Istanbul  138
+  - 7.7 Mantendo as dependências atualizadas  139
+- **Deploy em produção**  141
+  - 8.1 Healthcheck 141
+  - 8.2 Cluster 143
+  - 8.2.1 Recuperando de falhas 145
+  - 8.3 Instalando o NodeJS em produção 146
+  - 8.4 Configurando o Nginx  147
+  - 8.5 Módulo Forever  149
+  - 8.6 Unix Service  149
+  - 8.7 Travis CI 151
+  - 8.8 Heroku e MongoLab 151
