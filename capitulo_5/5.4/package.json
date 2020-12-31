@@ -1,23 +1,16 @@
 {
-  "name": "livro",
-  "type": "module",
+  "name": "5.4",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "export DEBUG=livro_nodejs:* &&nodemon server/bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "engines": {
-    "node": ">=14.0.0"
   },
   "keywords": [],
   "author": "William Bruno <wbrunom@gmail.com> (http://wbruno.com.br)",
   "license": "ISC",
   "dependencies": {
-    "config": "^3.3.3",
-    "dnscache": "^1.0.2",
-    "express": "^4.17.1",
+    "http-errors": "^1.8.0",
     "mongoist": "^2.5.3"
   }
 }

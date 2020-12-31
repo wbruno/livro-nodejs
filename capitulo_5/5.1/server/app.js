@@ -1,8 +1,5 @@
 import express from 'express'
+import routes from './routes/index.js'
 const app = express()
-
-app.get('/', (req, res) => {
-  res.send('Ola s')
-})
-
-app.listen(3000)
+app.use(routes)
+export default app
