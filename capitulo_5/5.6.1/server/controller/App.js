@@ -6,7 +6,7 @@ const AppController = {
   },
   handleError(err, request, response, next) {
     if (err.status !== 404) console.log(err.stack)
-    response.status(err.status).json({ err: err.message })
+    response.status(err.status || 500).json({ err: err.message })
   }
 }
 export default AppController

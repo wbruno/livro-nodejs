@@ -12,21 +12,26 @@ const Stormtrooper = {
       .then(result => response.json(result))
       .catch(next)
   },
-  async byId(request, response, next) {
-    const id = request.params.id
-    if (!/[0-9a-f]{24}/.test(id)) {
-      return next(createError(422, 'invalid id'))
-    }
-    try {
-      const result = await repository.byId(id)
-        .then(handleNotFound)
-      response.json(result)
-    } catch(e) {
-      next(e)
-    }
+  byId(request, response, next) {
+    repository.byId(request.params.id)
+      .then(handleNotFound)
+      .then(result => response.json(result))
+      .catch(next)
   },
-  create(request, response, next) {},
-  updateById(request, response, next) {},
-  deleteById(request, response, next) {}
+  create(request, response, next) {
+    repository.create(request.body)
+      .then(result => response.status(201).json(result))
+      .catch(next)
+  },
+  updateById(request, response, next) {
+    repository.updateById(request.params.id, request.body)
+      .then(result => response.json(result))
+      .catch(next)
+  },
+  deleteById(request, response, next) {
+    repository.deleteById(request.params.id)
+      .then(_ => response.sendStatus(204))
+      .catch(next)
+  }
 }
 export default Stormtrooper
