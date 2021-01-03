@@ -19,6 +19,7 @@ const Stormtrooper = {
       .catch(next)
   },
   create(request, response, next) {
+    console.log('request.body', request.body)
     repository.create(request.body)
       .then(result => response.status(201).json(result))
       .catch(next)

@@ -10,7 +10,8 @@
   "author": "William Bruno <wbrunom@gmail.com> (http://wbruno.com.br)",
   "license": "ISC",
   "dependencies": {
-    "http-errors": "^1.8.0",
-    "mongoist": "^2.5.3"
+    "mongoist": "^2.5.3",
+    "pg": "8.5.1",
+    "redis": "3.0.2"
   }
 }

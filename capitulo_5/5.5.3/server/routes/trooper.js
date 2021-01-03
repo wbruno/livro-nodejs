@@ -1,10 +1,11 @@
 import { Router } from 'express'
+import createError from 'http-errors'
 import controller from '../controller/Stormtrooper.js'
 const trooperRoutes = new Router()
 
 const verifyId = (request, response, next) => {
   const id = request.params.id
-  if (!/[0-9a-f]{24}/.test(id)) {
+  if (!/^[0-9]+$/.test(id)) {
     return next(createError(422, 'invalid id'))
   }
   next()
