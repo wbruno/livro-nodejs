@@ -1,0 +1,13 @@
+{
+  "name": "1.5.2",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "writeFile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "William Bruno <wbrunom@gmail.com> (http://wbruno.com.br)",
+  "license": "ISC"
+}
