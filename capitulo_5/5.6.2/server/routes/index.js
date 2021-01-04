@@ -17,9 +17,8 @@ routes.post('/login', (request, response, next) => {
   }
   next(createError(401, 'Unauthorized'))
 })
-
 const verifyJwt = (request, response, next) => {
-  const token = request.query.token
+  const token = request.query.token || request.headers['x-token'];
   if (!token) {
     return next(createError(401, 'Unauthorized'))
   }
@@ -37,7 +36,5 @@ const verifyJwt = (request, response, next) => {
     return next(err)
   }
 }
-
-
 routes.use('/troopers', verifyJwt, trooperRoutes)
 export default routes
