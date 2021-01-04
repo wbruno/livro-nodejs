@@ -1,0 +1,5 @@
+{"_id":{"$oid":"5ff30c2e7952ec31de6b8e16"},"name":"CC-1010","nickname":"Fox","patent":"Commander","divisions":["501st Legion","Coruscant Guard"]}
+{"_id":{"$oid":"5ff30c2e7952ec31de6b8e17"},"name":"CT-7567","nickname":"Rex","patent":"Captain","divisions":["501st Legion"]}
+{"_id":{"$oid":"5ff30c2e7952ec31de6b8e18"},"name":"CC-2224","nickname":"Cody","patent":"Commander","divisions":["212th Attack Battalion"]}
+{"_id":{"$oid":"5ff30c2e7952ec31de6b8e19"},"name":"","nickname":"Hardcase","patent":"Soldier","divisions":["501st Legion"]}
+{"_id":{"$oid":"5ff30c2e7952ec31de6b8e1a"},"name":"CT-27-5555","nickname":"Fives","patent":"Soldier","divisions":["501st Legion"]}
