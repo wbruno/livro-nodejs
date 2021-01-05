@@ -1,0 +1,18 @@
+{
+  "name": "7.1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "util.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest tests/*.test.js"
+  },
+  "keywords": [],
+  "author": "William Bruno <wbrunom@gmail.com> (http://wbruno.com.br)",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "26.6.3"
+  }
+}
