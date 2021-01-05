@@ -7,12 +7,15 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "jest tests/*.test.js"
+    "pretest": "eslint --fix util.js",
+    "test": "jest tests/*.test.js --coverage"
   },
   "keywords": [],
   "author": "William Bruno <wbrunom@gmail.com> (http://wbruno.com.br)",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "7.17.0",
     "jest": "26.6.3"
-  }
+  },
+  "dependencies": {}
 }

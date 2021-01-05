@@ -30,3 +30,12 @@ describe('#guid', () => {
     assert.notEqual(uuid1, uuid4)
   })
 })
+
+describe('isBiggerThan', () => {
+  it('should return [3,4,5] from input [1,2,3,4,5], 3', () => {
+     assert.deepEqual(util.isBiggerThan([1,2,3,4,5], 3), [3,4,5])
+  })
+  it('should return [] from input [1,2,3,4,5], 10', () => {
+     assert.deepEqual(util.isBiggerThan([1,2,3,4,5], 10), [])
+  })
+})
