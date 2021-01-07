@@ -1,0 +1,5 @@
+{
+  "mongo": {
+    "uri": "mongodb://host.docker.internal:27017/livro_nodejs"
+  }
+}

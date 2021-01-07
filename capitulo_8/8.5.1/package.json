@@ -1,0 +1,19 @@
+{
+  "name": "8.5.1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/bin/www.js",
+    "dev": "nodemon server/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "William Bruno <wbrunom@gmail.com> (http://wbruno.com.br)",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "1.7.4",
+    "express": "4.17.1",
+    "helmet": "4.3.1"
+  }
+}

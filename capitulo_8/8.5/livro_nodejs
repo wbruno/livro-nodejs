@@ -1,0 +1,42 @@
+upstream nodejs {
+    server 127.0.0.1:3000;
+}
+server {
+    listen 80;
+    server_name site.com.br www.site.com.br;
+    root /var/www/site.com.br/;
+    if ($http_host != "site.com.br") {
+        rewrite ^ http://site.com.br$request_uri permanent;
+    }
+    root /Users/wbruno/Sites/wbruno/livro/capitulo_8/8.1/public/;
+    error_page 404 500 502 503 504 /50x.html;
+    location /50x.html {
+        internal;
+    }
+    location / {
+        server_tokens off;
+        add_header pragma public;
+        add_header cache-control "public";
+        add_header x-frame-options SAMEORIGIN;
+        add_header x-content-type-options nosniff;
+        add_header x-xss-protection "1; mode=block";
+        add_header strict-transport-security "max-age=1440; includeSubdomains";
+        add_header content-security-policy "default-src 'self' data: *; img-src 'self' blob: data: *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src 'unsafe-inline' *";
+        add_header x-content-security-policy "default-src 'self' data: *; img-src 'self' blob: data: *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src 'unsafe-inline' *";
+        add_header x-webkit-csp "default-src 'self' data: *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src 'unsafe-inline' *";
+        proxy_set_header X-Real-IP  $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Host $host;
+        proxy_pass http://nodejs;
+    }
+    location ~* \.(?:ico|css|html|json|js|map|gif|jpe?g|png|ttf|woff|woff2|svg|eot|txt|csv)$ {
+        access_log off;
+        expires 30d;
+        add_header pragma public;
+        add_header Cache-Control "public, mustrevalidate, proxy-revalidate";
+        root /Users/wbruno/Sites/wbruno/livro/capitulo_8/8.1/public/;
+    }
+    location ~ /\.ht {
+        deny all;
+    }
+}

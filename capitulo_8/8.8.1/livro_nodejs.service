@@ -1,0 +1,13 @@
+[Unit]
+Description=livro nodejs
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=ec2-user
+Environment="NODE_CONFIG_DIR=/var/www/livro_nodejs/config/"
+ExecStart=/usr/bin/env /home/ec2-user/.nvm/versions/node/v15.5.1/bin/node /var/www/livro_nodejs/server/bin/www.js
+[Install]
+WantedBy=multi-user.target
