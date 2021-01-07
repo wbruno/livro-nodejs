@@ -1,5 +1,5 @@
 {
   "mongo": {
-    "uri": "mongodb+srv://livro_nodejs:pYmIFhWqD5JXybsh@delivery-admin.26w8c.mongodb.net/delivery-admin"
+    "uri": "mongodb://localhost:27017/livro_nodejs"
   }
 }
