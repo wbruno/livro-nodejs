@@ -1,0 +1,14 @@
+{
+  "name": "1.2.2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "./scripts.sh dev",
+    "build": "./scripts.sh build",
+    "test": "./scripts.sh test"
+  },
+  "keywords": [],
+  "author": "William Bruno <wbrunom@gmail.com> (http://wbruno.com.br)",
+  "license": "ISC"
+}
