@@ -1,0 +1,97 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "/troopers",
+    "type": "object",
+    "title": "A Stormtrooper",
+    "description": "Um soldado do Império Galático",
+    "default": {},
+    "examples": [
+        {
+            "_id": "5ff30c2e7952ec31de6b8e18",
+            "name": "CC-1010.",
+            "nickname": "Fox",
+            "patent": "Major",
+            "divisions": [
+                "501st Legion",
+                "Coruscant Guard"
+            ]
+        }
+    ],
+    "required": [
+        "name",
+        "patent"
+    ],
+    "properties": {
+        "_id": {
+            "$id": "#/properties/_id",
+            "type": "string",
+            "title": "Campo _id",
+            "description": "Identificador único, nesse caso é o ObjectId do MongoDB",
+            "default": "",
+            "examples": [
+                "5ff30c2e7952ec31de6b8e18"
+            ]
+        },
+        "name": {
+            "$id": "#/properties/name",
+            "type": "string",
+            "title": "Nome do soldado",
+            "description": "A tag de identificação",
+            "default": "",
+            "examples": [
+                "CC-1010."
+            ]
+        },
+        "nickname": {
+            "$id": "#/properties/nickname",
+            "type": "string",
+            "title": "Apelido",
+            "description": "É como os amigos conhecem esse soldado",
+            "default": "",
+            "examples": [
+                "Fox"
+            ]
+        },
+        "patent": {
+            "$id": "#/properties/patent",
+            "type": "string",
+            "title": "The patent schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Major"
+            ]
+        },
+        "divisions": {
+            "$id": "#/properties/divisions",
+            "type": "array",
+            "title": "The divisions schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    "501st Legion",
+                    "Coruscant Guard"
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/divisions/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/divisions/items/anyOf/0",
+                        "type": "string",
+                        "title": "The first anyOf schema",
+                        "description": "As tropas que esse soldado pertence ou já pretenceu",
+                        "default": "",
+                        "examples": [
+                            "501st Legion",
+                            "Coruscant Guard"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "additionalProperties": true
+}
