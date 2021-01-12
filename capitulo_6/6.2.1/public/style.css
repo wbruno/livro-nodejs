@@ -1,0 +1,11 @@
+body {
+    font: 400 16px Helvetica, Arial, sans-serif;
+    color: #111;
+}
+table, th, td {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 0.4rem;
+}
