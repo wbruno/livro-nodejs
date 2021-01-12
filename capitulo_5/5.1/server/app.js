@@ -1,5 +1,7 @@
 import express from 'express'
 import routes from './routes/index.js'
 const app = express()
-app.use(routes)
+app.get('/', (req, res) => {
+  res.send('Ola s')
+})
 export default app
