@@ -7,8 +7,11 @@ const sql = `SELECT
   JOIN patents p ON p.id = st.id_patent`
 
 const Stormtrooper = {
-  list() {
-    return db.query(sql)
+  list(q = '', page = 1) {
+    const DEFAULT_LIMIT = 3
+    const skip = Math.abs(page - 1) * DEFAULT_LIMIT
+    const where = q ? `WHERE st.name ilike '%' || $1::text || '%'` : ` WHERE $1::text = ''`
+    return db.query(`${sql} ${where} LIMIT ${DEFAULT_LIMIT} OFFSET ${skip}`, [q])
       .then(result => result.rows)
   },
   byId(id) {

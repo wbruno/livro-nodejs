@@ -8,7 +8,8 @@ const handleNotFound = (result) => {
 }
 const Stormtrooper = {
   list(request, response, next) {
-    repository.list()
+    const { q, page } = request.query
+    repository.list(q, page)
       .then(result => response.json(result))
       .catch(next)
   },

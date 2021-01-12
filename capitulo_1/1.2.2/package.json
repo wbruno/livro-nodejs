@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "./scripts.sh dev",
     "build": "./scripts.sh build",
+    "preforrest": "echo 'Antes'",
+    "forrest": "echo 'Run, Forrest, run!'",
+    "postforrest": "echo 'Depois'",
     "test": "./scripts.sh test"
   },
   "keywords": [],
