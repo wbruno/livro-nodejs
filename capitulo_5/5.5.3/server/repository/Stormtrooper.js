@@ -1,4 +1,5 @@
 import db from '../config/pg.js'
+import { setAsync } from '../config/redis.js'
 
 const sql = `SELECT
   st.id, st.name, st.nickname,
@@ -17,6 +18,12 @@ const Stormtrooper = {
   byId(id) {
     return db.query(`${sql} WHERE st.id = $1::int`, [id])
       .then(result => result.rows && result.rows[0])
+      .then(result => {
+        const SIX_MINUTES = 60 * 6
+        setAsync(`trooper:${id}`, JSON.stringify(result), 'EX', SIX_MINUTES)
+          .catch(e => console.log(e))
+        return result
+      })
   },
   create(data) {
     const sql = `INSERT INTO stormtroopers (name, nickname, id_patent)
