@@ -1,4 +1,3 @@
-const axios = require('axios')
 const fs = require('fs/promises')
 const marked = require('marked')
 const engine = (template, ...data) => {
@@ -38,7 +37,7 @@ async function* paginate() {
   let result;
   while (!result || result.status === 200) {
     try {
-      result = await axios.get(`https://swapi.dev/api/people/?page=${page}`)
+      result = await (fetch(`https://swapi.dev/api/people/?page=${page}`).then(res => res.json()))
       page++
       yield result
     } catch (e) {
@@ -48,8 +47,8 @@ async function* paginate() {
 }
 const getData = async () => {
   let results = []
-  for await (const response of paginate()) {
-    results = results.concat(response.data.results)
+  for await (const data of paginate()) {
+    results = results.concat(data.results)
   }
   return {
     count: results.length,

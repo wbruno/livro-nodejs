@@ -1,5 +1,5 @@
 {
-  "name": "2.9",
+  "name": "2.8",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "William Bruno <wbrunom@gmail.com> (http://wbruno.com.br)",
   "license": "ISC",
-  "dependencies": {
-    "node-html-parser": "2.0.1"
+  "devDependencies": {
+    "marked": "5.0.0"
   }
 }

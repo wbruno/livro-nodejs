@@ -10,7 +10,7 @@
   "author": "William Bruno <wbrunom@gmail.com> (http://wbruno.com.br)",
   "license": "ISC",
   "dependencies": {
-    "axios": "0.21.1",
-    "marked": "1.2.7"
+    "axios": "1.4.0",
+    "marked": "5.0.0"
   }
 }
