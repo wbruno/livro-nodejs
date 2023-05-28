@@ -1,0 +1,6 @@
+{
+    "name": { "S": "Naboo" },
+    "region": { "S": "Orla Média" },
+    "suns": { "N": "1" },
+    "moons": { "N": "3" }
+}

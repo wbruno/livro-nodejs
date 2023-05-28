@@ -1,0 +1,7 @@
+{
+    "name": { "S": "Coruscant" },
+    "region": { "S": "Mundos do Núcleo" },
+    "diameter": { "S": "12.240 km" },
+    "suns": { "N": "1" },
+    "moons": { "N": "4" }
+}

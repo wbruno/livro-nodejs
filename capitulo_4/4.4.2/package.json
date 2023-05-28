@@ -1,0 +1,16 @@
+{
+  "name": "4.4.2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dynamodb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "3.341.0",
+    "@aws-sdk/lib-dynamodb": "3.341.0"
+  }
+}
