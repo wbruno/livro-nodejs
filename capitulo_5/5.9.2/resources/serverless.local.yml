@@ -1,0 +1,23 @@
+provider:
+  vpc:
+    securityGroupIds:
+      - sg-..
+    subnetIds:
+      - subnet-..
+  iam:
+    role:
+      name: serverless-${self:service}-${self:provider.stage}-role
+resources:
+  Resources: ${file(resources/table.yml)}
+apiGateway:
+  apiKeys:
+    - name: localKey
+      value: d41d8cd98f00b204e9800998ecf8427e
+custom:
+  customDomain:
+    domainName: localhost
+environment:
+  AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
+  AWS_REGION: sa-east-1
+  NODE_ENV: development
+  DYNAMODB_ENDPOINT: http://localhost:8000

@@ -1,0 +1,116 @@
+service: shortener
+plugins:
+  - serverless-domain-manager
+  - serverless-dynamodb-local
+  - serverless-offline #needs to be last in the list
+useDotenv: true
+configValidationMode: warn
+package:
+  individually: false
+  excludeDevDependencies: true
+  patterns:
+    - node_modules/**
+    - src/**
+provider:
+  name: aws
+  architecture: arm64
+  region: ${opt:region}
+  stage: ${opt:stage}
+  runtime: nodejs18.x
+  versionFunctions: true
+  logRetentionInDays: 3
+  timeout: 30
+  stackName: serverless-${self:service}-${self:provider.stage}
+  memorySize: 128
+  tracing:
+    apiGateway: true
+  apiGateway:
+    apiKeys: ${file(./resources/serverless.${self:provider.stage}.yml):apiGateway.apiKeys, ''}
+    apiKeySourceType: HEADER
+    disableDefaultEndpoint: true
+  stackTags:
+    Name: ${self:service}
+  deploymentBucket:
+    name: algum-s3-${self:provider.stage}-deployment
+  environment: ${file(./resources/serverless.${self:provider.stage}.yml):environment}
+  iam: ${file(./resources/serverless.${self:provider.stage}.yml):provider.iam, ''}
+  logs:
+    restApi:
+      accessLogging: false
+      executionLogging: false
+functions:
+  redirect:
+    description: redirects hash to given url
+    handler: src/handler.redirect
+    events:
+      - http:
+          path: /{id}
+          method: get
+          cors: true
+          private: false
+  byId:
+    description: retrieve a shortened url by its id
+    handler: src/shortener.byId
+    events:
+      - http:
+          path: /shorts/{id}
+          method: get
+          cors: true
+          private: true
+  create:
+    description: create a new shortened url
+    handler: src/shortener.create
+    events:
+      - http:
+          path: /shorts
+          method: post
+          cors: true
+          private: true
+  list:
+    description: list all shortened urls
+    handler: src/shortener.list
+    events:
+      - http:
+          path: /shorts
+          method: get
+          cors: true
+          private: true
+  update:
+    description: update a new shortened url
+    handler: src/shortener.update
+    events:
+      - http:
+          path: /shorts/{id}
+          method: put
+          cors: true
+          private: true
+  remove:
+    description: remove a new shortened url
+    handler: src/shortener.remove
+    events:
+      - http:
+          path: /shorts/{id}
+          method: delete
+          cors: true
+          private: true
+resources: ${file(./resources/serverless.${self:provider.stage}.yml):resources, ''}
+custom:
+  dynamodb:
+    stages:
+      - local
+    start:
+      seed: true
+      migrate: true
+    seed:
+      domain:
+        sources:
+          - table: Shortener
+            sources: [./resources/db/shorts.json]
+  endpoints:
+    dynamodb-url: 'http://localhost:8000'
+  customDomain:
+    enabled: true
+    domainName: ${self:service}.${self:provider.stage}.seudominio.com.br
+    stage: ${self:provider.stage}
+    createRoute53Record: false
+    basePath: ''
