@@ -1,0 +1,26 @@
+provider:
+  iam:
+    role:
+      name: serverless-${self:service}-${self:provider.stage}-role
+      managedPolicies:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      statements:
+        - Effect: 'Allow'
+          Action:
+            - 'dynamodb:Scan'
+            - 'dynamodb:Query'
+            - 'dynamodb:GetItem'
+            - 'dynamodb:PutItem'
+            - 'dynamodb:DeleteItem'
+          Resource:
+            - 'arn:aws:dynamodb:${self:provider.region}:123:table/Shortener'
+            - 'arn:aws:dynamodb:${self:provider.region}:123:table/Shortener/index/*'
+resources:
+  Resources:
+apiGateway:
+  apiKeys:
+    - name: ${self:service}-prd
+      description: api key para o lambda de prod
+environment:
+  AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
+  NODE_ENV: production
