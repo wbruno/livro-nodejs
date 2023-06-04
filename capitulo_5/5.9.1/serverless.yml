@@ -1,33 +1,16 @@
 service: shortener
-
 plugins:
   - serverless-domain-manager
   - serverless-dynamodb-local
   - serverless-offline #needs to be last in the list
-
 useDotenv: true
 configValidationMode: warn
-
 package:
   individually: false
   excludeDevDependencies: true
   patterns:
     - node_modules/**
     - src/**
-    - '!.github/**'
-    - '!.vscode/**'
-    - '!coverage/**'
-    - '!resources/**'
-    - '!test/**'
-    - '!.eslintrc.json'
-    - '!.gitignore'
-    - '!.nvmrc'
-    - '!jest.config.js'
-    - '!package.json'
-    - '!package-lock.json'
-    - '!README.md'
-    - '!serverless.yml'
-
 provider:
   name: aws
   architecture: arm64
@@ -55,7 +38,6 @@ provider:
     restApi:
       accessLogging: false
       executionLogging: false
-
 functions:
   redirect:
     description: redirects hash to given url
@@ -66,9 +48,7 @@ functions:
           method: get
           cors: true
           private: false
-
 resources: ${file(./resources/serverless.${self:provider.stage}.yml):resources, ''}
-
 custom:
   dynamodb:
     stages:
