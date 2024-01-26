@@ -12,6 +12,6 @@
   "dependencies": {
     "mongoist": "^2.5.3",
     "pg": "8.5.1",
-    "redis": "3.0.2"
+    "redis": "3.1.1"
   }
 }
